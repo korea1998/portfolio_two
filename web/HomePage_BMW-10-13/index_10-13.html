@@ -1,0 +1,2742 @@
+<!DOCTYPE html>
+<html language ="Korea">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" >
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    
+
+    <title>MoonSungMin</title>
+    <style>
+
+        /* default      =      100% = 16px, 50% = 8px, 25% = 4px, 12.5% = 2px, 6.25% = 1px, 10% = 1.51px
+        px           =      고정값
+        rem          =      최상위  // 딱, 한번의 적용.      // 최상위
+        rm           =      부모    // 여러변, 개별의 적용.  // 부모 요소 
+        vw           =      ?
+        %            =      ? */
+        
+    html{
+        font-size: 6.25%;        
+    }
+    body{
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        color: #000;
+        /* scroll-behavior:unset; */
+    }
+    .korea_margin{
+        width: 100%;
+        max-width: 1400px;
+        height: 5000px;
+        margin: -70px auto;
+    }
+    .default{
+        width: 100%;
+        /* max-width: 2000px; */
+        /* margin: 0 auto; */
+        position: relative;
+        /* top: -100px; */
+    }
+    .head_box{
+        width: 100%;
+        height: 100px;
+        background:linear-gradient(0deg, transparent, #00000066);
+        transition: 0.5s;
+        position: relative;
+        z-index: 99;
+    }
+    .head_menu_entire{
+        width: 100%;
+        height: 100px;
+        max-width: 1680px;
+        margin: 0 auto;
+        /* background: linear-gradient(0deg, transparent, #00000066) */
+    }
+    .head_menu{
+        width: 100%;
+        max-width: 1180px;
+        height: 100px;
+        /* font-size: 10px; */
+        font-weight: bold;
+        margin: 0 auto;
+        /* padding: 0 20px; */
+        position: relative;
+        z-index: 20;
+        /* display: flex;
+        justify-content: space-between; */
+        border-left: 20px solid rgba(0, 0, 0, 0);
+        border-right: 20px solid rgba(0, 0, 0, 0);
+        display: flex;
+        justify-content: space-between;
+    }
+    .head_background{
+        width: 100%;
+        max-width: 1680px;
+        height: 756px;
+        margin: 0 auto;
+        background-image: url(../HomePage_BMW-10-13/imgs/background.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        z-index: 98;
+    }
+    .head_menu_one{
+        display: inline-table;
+        vertical-align: middle;
+        display: flex;
+        flex: 1;
+    }
+    .menu_one{
+        height: 59px;
+        padding: 20px;
+        line-height: 59px;
+        text-align: center;
+        display: inline-table;
+        vertical-align: middle;
+        color: #ffffff;
+        cursor: pointer;
+        font-size: 16rem;
+    }
+    .head_menu_three_line_blue{
+        width: 100px;
+        height: 5px;
+        background-color: #1c69d4;
+        position: relative;
+        top: -4px;
+        display: none;
+    }
+    #menu_one_one_background{
+        width: 100%;
+        height: 61.5vw;
+        background-color: rgba(0, 0, 0, 0.4);
+        position: absolute;
+        z-index: 9999;
+        top: 100px;
+        display: none;
+        margin: 0 auto;
+        overflow-y: hidden;
+        overflow:scroll;
+    }
+    #menu_one_one_background::-webkit-scrollbar{
+        display: none;
+    }
+    #background{
+        width: 100%;
+        max-width: 1320px;
+        height: 41.7vw;
+        background-color: #ffffff;
+        position: relative;
+        z-index: 5;
+        left: 8px;
+        margin: 0 auto;
+    }
+    #background_head{
+        width: 100%;
+        height: 70px;
+        text-align: center;
+        line-height: 70px;
+    }
+    #background_head_line{
+        width: 94.4%;
+        height: 1px;
+        background-color: #f2f2f2;
+        margin: 0 0 0 42px;
+    }
+    #background_head_one{
+        width: 50px;
+        height: 70px;
+        margin: 0 0 0 50px;
+        display: inline-table;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+    .javascript_one{
+        width: 100px;
+        height: 100px;
+    }
+    #background_head_twp{
+        width: 50px;
+        height: 70px;
+        padding: 0 3px;
+        display: inline-table;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+    #menu_one_one_close{
+        width: 50px;
+        height: 70px;
+        cursor: pointer;
+        position: relative;
+        top: -2px;
+        display: inline-table;
+        vertical-align: middle;
+    }
+    #menu_one_one_close i{
+        font-size: 23px;
+        cursor: pointer;
+    }
+    #background_bmw{
+      opacity: 0;
+      /* position: absolute;
+      top: 80px; */
+    }
+    .background_bmw_m8{
+        opacity: 0;
+        /* transition: 2s; */
+    }
+    .javascript_two_box_one{
+        margin: 0 41px;
+    }
+    .javascript_two_box{
+        position: absolute;
+        top: 80px;
+        opacity: 0;
+        /* display: none; */
+        /* position: absolute;
+        top: 80px; */
+    }
+    .javascript_three_box{
+        /* display: none; */
+        /* transition: all 1s; */
+        opacity: 0;
+        position: absolute;
+        top: 80px;
+    }
+    .javascript_three_box_icon{
+        display: inline-table;
+        vertical-align: middle;
+    }
+    .javascript_three_box_number{
+        display: inline-table;
+        vertical-align: middle;
+    }
+    .javascript_three_onwer_number{
+        display: inline-table;
+        vertical-align: middle;
+    }
+    #background_bmw_m8_yellow_is_mine_thisyear{
+        font-size: 100px;
+        font-weight: 500;
+        color: #e6e6e6;
+        text-align: center;
+        margin: 35px 0 0 0;
+        letter-spacing: -7px;
+    }
+    #background_bmw_m8_yellow_is_mine_ihavethebmwkey_one{
+        margin: 0 0 0 300px;
+        position: relative;
+        top: -10px;
+        /* z-index: 1; */
+    }
+    #background_bmw_m8_yellow_is_mine_ihavethebmwkey_one img{
+        width: 500px;
+        height: 100px;
+    }
+    #background_bmw_m8_yellow_is_mine_ihavethebmwkey_two{
+        margin:-170px 270px 0 0;
+        text-align: center;
+        position: relative;
+        /* z-index: 2; */
+    }
+    #background_bmw_m8_yellow_is_mine_ihavethebmwkey_two img{
+        width: 230px;
+        height: 150px;
+    }
+    #background_bmw_m8_yellow_is_mine_ihavethebmwkey_three{
+        margin: -175px 0 0 450px;
+        position: relative;
+        /* z-index: 3; */
+    }
+    #background_bmw_m8_yellow_is_mine_ihavethebmwkey_three img{
+        width: 350px;
+        height: 200px;
+    }
+    #background_bmw_m8_yellow_is_mine_ihavethebmwkey_four{
+        position: relative;
+        /* z-index: 4; */
+        margin: -260px 0 0 578px;
+    }
+    #background_bmw_m8_yellow_is_mine_whypickthebmwbecauselooklikestrong{
+        width: 290px;
+        height: 50px;
+        background-color: #1366d7;
+        text-align: center;
+        line-height: 55px;
+        color: #ffffff;
+        margin: 0 0 0 520px;
+        font-weight: bold;
+        letter-spacing: -1px;
+    }
+    #arrow{
+        font-size: 12rem;
+        font-weight: bold;
+        position: relative;
+        top: 307px;
+        background-color: #f2f2f2;
+        width: 100%;
+    }
+    #arrow_good{
+        display: inline-table;
+        vertical-align: middle;
+        width: 19.6%;
+        height: 50px;
+        text-align: center;
+        background-color: #f2f2f2;
+        line-height: 50px;
+    }
+    #good_icon{
+        display: inline-table;
+        vertical-align: middle;
+        margin: 0 20px 0 0;
+        color: blue;
+        font-size: 20rem;
+    }
+    #good_yes{
+        display: inline-table;
+        vertical-align: middle;
+    }
+    #menu_one_one:hover ~ .head_menu_three_line_blue{
+        /* display: block;
+        transition: all 1s; */
+        background-color: red;
+        width: 100px;
+        height: 100px;
+    }
+    #menu_one_two:hover ~ .head_menu_three_line_blue{
+        display: block;
+        transform: translateX(120px);
+        transition: all 1s;
+    }
+    #menu_one_three:hover ~ .head_menu_three_line_blue{
+        display: block;
+        transform: translateX(255px);
+        transition: all 1s;
+    }
+    #menu_one_four:hover ~ .head_menu_three_line_blue{
+        display: block;
+        transform: translateX(388px);
+        transition: all 1s;
+    }
+    #menu_one_five:hover ~ .head_menu_three_line_blue{
+        display: block;
+        transform: translateX(488px);
+        transition: all 1s;
+    }
+    .head_menu_two_list{
+        /* width: calc(100% - 75%); */
+        height: 100px;
+        display: inline-table;
+        vertical-align: middle;
+        position: relative;
+        z-index: 21;
+    }
+    .head_menu_two{
+        height: 99px;
+        line-height: 59px;
+        display: inline-table;
+        vertical-align: middle;
+        position: relative;
+        z-index: 20;
+    }
+    .menu_two{
+        display: inline-table;
+        vertical-align: middle;
+        padding: 20px;
+        line-height: 59px;
+        font-size: 20rem;
+        color: #ffffff;
+        cursor: pointer;
+    }
+    .head_menu_three{
+        height: 59px;
+        display: inline-table;
+        vertical-align: middle;
+        padding: 20px;
+        cursor: pointer;
+    }
+    .head_menu_three img{
+        width: 53px;
+        height: 53px;
+    }
+    .head_menu_three_line{
+        width: 80%;
+        max-width: 1080px;
+        height: 1px;
+        background-color: rgba(255,255,255,0.4);
+        margin: 0 auto;
+        position: relative;
+        left: -50px;
+        top: 100px;
+    }
+    .head_menu_line{
+        width: 1px;
+        height: 1px;
+        background-color: blue;
+    }
+    .head_menu_sub_list{
+        position: relative;
+        top: 15%;
+        left: 5%;   
+        z-index: 3;
+    }
+    .head_menu_sub{
+        width: 255px;
+        font-size: 48rem;
+        margin: 0 0 16px 0;
+        color: white;
+        cursor: pointer;
+    }
+    .undefined{
+        display: inline-table;
+        vertical-align: middle;
+        position: relative;
+        top: -50px;
+        margin: 0 200px 0 0;
+        display: none;
+    }
+    .undefined img{
+        width: 500px;
+        height: 500px;
+    }
+    .head_menu_sheer{
+        width: 80%;
+        font-size: 17rem;
+        text-align: right;
+        color: white;
+        position: relative;
+        top: 15%;
+    }
+    .head_menu_sheer span{
+        font-weight: bold;
+    }
+    .head_menu_find{
+        width: 285px;
+        height: 52px;
+        background-color: #1c69d4;
+        color: white;
+        text-align: center;
+        line-height: 52px;
+        cursor: pointer;
+        font-size: 16rem;
+        font-weight: bold;
+    }
+    .head_menu_find:hover{
+        background-color: #1653a9;
+        transition: all 1s;
+    }
+    .main_two_area{
+        width: 100%;
+        max-width: 1680px;
+        margin: 0 auto;
+        display: flex;
+    }
+    .main_one_section{
+        background: url(../HomePage_BMW-10-13/imgs/back_left.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 837.5px;
+        height: 377.25px;
+        margin: 5px 5px 0 0;
+    }
+    .main_one_section_box{
+        max-width: 840px;
+        background: linear-gradient(to top, rgba(255,255,255,0), rgba(38,38,38,0.4));
+        padding: 41.875px;
+    }
+    .main_two_section_box{
+        max-width: 840px;
+        background: linear-gradient(to top, rgba(255,255,255,0), rgba(38,38,38,0.4));
+        padding: 41.875px;
+    }
+    .main_one_title{
+        cursor: pointer;
+        font-size: 32rem;
+        font-weight: 300;
+        color: #FFF;
+        margin: 0 0 15px 0;
+    }
+    .main_one_find{
+        width: 285px;
+        height: 52px;
+        color: #fff;
+        border: 1px solid white;
+        text-align: center;
+        line-height: 52px;
+        cursor: pointer;
+        font-size: 16rem;
+    }
+    .main_one_find:hover{
+        opacity: 0.2;
+        transition: all 1s;
+    }
+   .main_two_section{
+        background: url(../HomePage_BMW-10-13/imgs/4.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 837.5px;
+        height: 377.25px;
+        margin: 5px 0 0 0;
+   }
+   .main_two_title{
+        cursor: pointer;
+        font-size: 32rem;
+        font-weight: 300;
+        color: #fff;
+        margin: 0 0 15px 0;
+   }
+   .main_two_find{
+        cursor: pointer;
+        width: 285px;
+        height: 52px;
+        border: 1px solid #fff;
+        text-align: center;
+        line-height: 52px;
+        color: #fff;
+        font-size: 16rem;
+   }
+   .main_two_find:hover{
+       opacity: 0.2;
+       transition: all 1s;
+   }
+   .main_three_card{
+        display: inline-table;
+        vertical-align: middle;
+        background-color: #e6e6e6;
+        height: 156px;
+        line-height: 150px;
+    }
+   .main_three_card i{
+        padding: 50px 0 10px 85px;
+    }
+   #favorite{
+        width: 400px;
+        text-align: center;
+        margin: 0 10px 0 0;
+    }
+   #car{
+        width: 200px;
+        height: 126px;
+        text-align: center;
+        line-height: 156px;
+        margin: -70px 0 0 0;
+    }
+   .icon{
+        width: 0;
+        height: 0;
+        margin: 0 0 0 -20px;
+    }
+   .card{
+        color: #000;
+        margin: 40px 0 0 0;
+        width: 150px;
+        height: 50px;
+        text-align: center;
+    }
+   .box{
+        width: 170px;
+        height: 50px;
+        background-color: #1c69d4;
+    }
+    .moon{
+        width: 730px;
+        height: 50px;
+        background-color: #e6e6e6;
+    }
+    .main_three_area{
+        width: 100%;
+        max-width: 79.6825rem;
+    }
+    .main_third{
+        width: 100%;
+        height: 156px;
+        margin: 10px;
+        background-color: blue;
+    }
+    .main_third_one{
+        width: 1700px;
+        height: 156px;
+        background-color: black;
+        margin: 10px;
+    }
+    .bmw_korea_box_fourth{
+        width: 100%;
+        height: 876.79px;
+    }
+    .bmw_korea_box_fourth_start{
+        width: 100%;
+        max-width: 1200px;
+        height: 876.79px;
+        margin: 0 auto;
+    }
+    .bmw_korea_box_fourth_1{
+        width: 1200px;
+        height: 79.99px;
+        background-color: #fff;
+        border-bottom:1px solid #e6e6e6;
+    }
+    .bmw_korea_box_fourth_1_series{
+        height: 79.99px;
+        line-height: 79.99px;
+        display: inline-table;
+        vertical-align: middle;
+        padding: 0px 15px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .bmw_korea_box_fourth_2_entire{
+        padding: 0 22.5px;
+        line-height: 81px;
+        display: inline-table;
+        vertical-align: middle; 
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .bmw_korea_box_fourth_1_mark{
+        width: 100px;
+        height: 5px;
+        background-color: #1c69d4;
+        position: relative;
+        top: -5px;
+        left: 1px;
+    }
+    .bmw_korea_box_fourth_1_mark2{
+        width: 100px;
+        height: 5px;
+        background-color: #1c69d4;
+    }
+    .bmw_korea_box_fourth_2{
+        width: 1200px;
+        height: 410px;
+    }
+    .bmw_korea_box_fourth_2_all{
+        font-size: 96px;
+        color: #e6e6e6;
+        text-align: center;
+        margin: 50px 0 0 0;
+    }
+    .bmw_korea_box_fourth_2_picture{
+        margin: -135px 100px 0 310px;
+    }
+    .bmw_korea_box_fourth_2_picture_BMW{ 
+        display: inline-table;
+        vertical-align: middle;
+        margin: 0 -270px 0 0;
+        position: relative;
+        z-index: 2;
+    }
+    .bmw_korea_box_fourth_2_picture_BMW_street{
+        position: relative;
+        top: -130px;
+        left: -40px;
+        z-index: 1;
+    }
+    .korea_bmw{
+        width: 100%;
+        height: 231px;
+        margin: 20px 0 0 0;
+    }
+    .korea_bmw_middle{
+        width: 100%;
+        max-width: 1180px;
+        padding: 0 37.5px;
+        margin: 0 auto;
+        height: 156px;
+        background-color: white;
+    }
+    .korea_bmw_middle_main{
+        width: 1275px;
+        height: 164px;
+        position: relative;
+    }
+    .korea_bmw_middle_main_one{
+        width: 367px;
+        height: 108px;
+        padding: 24px 24px 24px 0;
+        display: inline-table;
+        vertical-align: middle;
+        font-size: 1.4rem;
+        font-weight: 300;
+        background-color: #f2f2f2;
+    }
+    .korea_bmw_middle_main_one div{
+        font-size: 23rem;
+    }
+    .korea_bmw_middle_main_one::before{
+        width: 1500px;
+        height: 156px;
+        background-color: #f2f2f2;
+        position: absolute;
+        left: -1500px;
+        top: 0;
+        content: '';
+    }
+    .korea_bmw_middle_main_two{
+        width: 245.25px;
+        height: 132px;
+        padding: 0 24px 24px;
+        background-color: #f2f2f2;
+        display: inline-table;
+        vertical-align: middle;
+    }
+    .korea_bmw_middle_main_two_icon{
+        text-align: center;
+        height: 78px;
+        line-height: 78px;
+        font-size: 30rem;
+    }
+    .korea_bmw_middle_main_two_car{
+        text-align: center;
+        height: 52px;
+        line-height: 50px;
+        background-color: #1c69d4;
+        color: white;
+        cursor: pointer;
+        font-size: 16rem;
+    }
+    .korea_bmw_middle_main_two_car:hover{
+        background-color: #1653a9;
+        transition: all 1s;
+    }
+    .korea_bmw_middle_main_three_icon{
+        text-align: center;
+        height: 78px;
+        line-height: 78px;
+        font-size: 30rem;
+    }
+    .korea_bmw_middle_main_three_button{
+        text-align: center;
+        height: 46.03px;
+        line-height: 50px;
+        cursor: pointer;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        font-size: 16rem;
+    }
+    .korea_bmw_middle_main_three_button:hover{
+        outline: 1px solid black;
+        outline-offset: -3px;
+    }
+    .korea_bmw_middle_main_three{
+        width: 196.38px;
+        height: 132px;
+        padding: 0 24px 24px;
+        background-color: #f2f2f2;
+        display: inline-table;
+        vertical-align: middle;
+        font-weight: bold;
+    }
+    .korea_bmw_middle_main_four{
+        width: 196.38px;
+        height: 132px;
+        padding: 0 24px 24px;
+        background-color: #f2f2f2;
+        display: inline-table;
+        vertical-align: middle;
+    }
+    .korea_bmw_middle_main_four::after{
+        width: 1500px;
+        height: 155px;
+        background-color: #f2f2f2;
+        position: absolute;
+        right: -1412px;
+        content: '';
+        top: 0;
+    }
+    .bmw_korea_box_fourth_2_button{
+        width: 285px;
+        height: 52px;
+        background-color: #1c69d4;
+        color: #fff;
+        font-size: 16px;
+        line-height: 52px;
+        text-align: center;
+        margin: -157px 0 0 470px;
+    }
+    .bmw_korea_box_five{
+        width: 100%;
+        max-width: 1310px;
+        height: 742px;
+        margin: -250px auto;
+    }
+    .bmw_korea_box_five_start{
+        width: 100%;
+        max-width: 1175px;
+        height: 742px;
+        margin: 0 auto;
+        padding: 0 37.5px;
+    }
+    .bmw_korea_box_five_1{
+        width: 1185px;
+        height: 64px;
+        font-size: 48px;
+        color: #262626;
+        margin: 0 0 34px 0;
+        padding: 0 15px 0 0;
+        font-weight: 100;
+    }
+    .bmw_korea_box_five_2{
+        width: 1200px;
+        height: 742px;
+        padding: 0 7.5px;
+    }
+    .bmw_korea_box_five_2_small_box{
+        overflow: hidden;
+        width: 380px;
+        height: 648px;
+        margin: 0 15px 0 0;
+        display: inline-table;
+        vertical-align: middle;
+    }
+    .bmw_korea_box_five_2_small_box_picture{
+        width: 380px;
+        cursor: pointer;
+    }
+    .bmw_korea_box_five_2_small_box_picture_background{
+        width: 380px;
+        height: 200px;
+        overflow: hidden;
+    }
+    .bmw_korea_box_five_2_small_box_picture_background img{
+        width: 380px;
+        height: 450px;
+    }
+    .bmw_korea_box_five_2_small_box_picture_title{
+        margin: -290px 0 0 0;
+        font-size: 16px;
+        color: #fff;
+        text-align: center;
+    }
+    .bmw_korea_box_five_2_small_box_picture_title span{
+        font-size: 25px;
+    }
+    .bmw_korea_box_five_2_small_box_picture_drive img{
+        margin: -175px 0 0 -50px;
+    }
+    .bmw_korea_box_five_2_small_box_picture_price{
+        margin: 190px 0 0 0;
+        text-align: center;
+        font-size: 17px;
+    }
+    .bmw_korea_box_five_2_small_box_picture_button{
+        width: 346.8px;
+        height: 52px;
+        border: 1px solid;
+        text-align: center;
+        line-height: 52px;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 20px 0 0 0;
+    }
+    .bmw_korea_box_five_2_small_box_picture_icon{
+        display: inline-table;
+        vertical-align: middle;
+    }
+    .bmw_korea_box_five_2_small_box_picture_explain{
+        display: inline-table;
+        vertical-align: middle;
+    }
+    .bmw_korea_box_five_2_small_box_picture_checK{
+        margin: 20px 0 0 0;
+    }
+    .bmw_korea_box_five_2_small_box_picture_checK_1{
+        margin: 0 0 10px 0;
+    }
+    .bmw_korea_box_five_2_small_box_picture_icon{
+        margin: 0 10px 0 0;
+    }
+    .bmw_korea_box_five_2_small_box_picture_explain{
+        margin: 0 0 10px 0;
+    }
+    .bmw_korea_box_six{
+        width: 100%;
+    }
+    .bmw_korea_box_six_1{
+        width: 200px;
+        display: inline-table;
+        vertical-align: middle;
+        font-size: 15px;
+    }
+    .bmw_korea_box_six_1 span{
+        font-weight: bold;
+    }
+    .bmw_korea_box_six_2{
+        width: 200px;
+        display: inline-table;
+        vertical-align: middle;
+        font-size: 15px;
+        float: right;
+        margin: 0 180px 0 0;
+    }
+    .bmw_korea_box_six_2 span{
+        font-weight: bold;
+    }
+    .bmw_korea_box_seven{
+        width: 1400px;
+        margin: 50px 50px 0 0;
+    }
+    .bmw_korea_box_seven_one_1{
+        width: 548px;
+        height: 430px;
+        display: inline-table;
+        vertical-align: middle;
+        padding: 15px;
+        border: 1px solid #e6e6e6;
+        margin: 0 10px 0 0;
+    }
+    .bmw_korea_box_seven_one_1 img{
+        width: 550px;
+        height: 300px;
+    }
+    .bmw_korea_box_seven_one_1_title{
+        font-size: 32px;
+        margin: 20px 0 10px 0;
+    }
+    .bmw_korea_box_seven_one_1_cont{
+        font-size: 16px;
+        margin: 20px 0 5px 0;
+        height: 60px;
+        line-height: 25px;
+    }
+    #media{
+        line-height: 60px;
+    }
+    .bmw_korea_box_seven_one_1_check{
+        margin: 0 0 5px 0;
+    }
+    .bmw_korea_box_seven_one_1_icon{
+        display: inline-table;
+        vertical-align: middle;
+    }
+    .bmw_korea_box_seven_one_1_chec{
+        display: inline-table;
+        vertical-align: middle;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0 0 5px 0;
+    }
+    .bmw_korea_box_seven_one_2{
+        display: inline-table;
+        vertical-align: middle;
+        border: 1px solid #e6e6e6;
+        width: 548px;
+        height: 430px;
+        padding: 15px;
+    }
+    .bmw_korea_box_seven_one_2 img{
+        width: 550px;
+        height: 300px;
+    }
+    .bmw_korea_box_seven_two{
+        width: 1400px;
+        margin: 50px 50px 0 0;
+    }
+    .bmw_korea_box_eight{
+        width: 1200px;
+        height: 2034.5px;
+    }
+    .bmw_korea_box_eight_start{
+        width: 1250px;
+        height: 2034.5px;
+        margin: 50px 0 0 0;
+    }
+    .bmw_korea_box_eight_start_box_fuor{
+        width: 100%;
+        height: 500px;
+    }
+    .bmw_korea_box_eight_start_box_fuor_small_box{
+        height: 432.53px;
+        margin: 10px 10px 0 0;
+        padding: 20px 0 0 0;
+        border: 1px solid #e6e6e6;
+        display: inline-table;
+        vertical-align: middle;
+    }
+    .bmw_korea_box_eight_start_box_fuor_small_box_img{
+        width: 248.6px;
+        height: 139.8px;
+        margin: 0 auto;
+    }
+    .bmw_korea_box_eight_start_box_fuor_small_box_img img{
+        width: 248.6px;
+        height: 139.8px;
+    }
+    .bmw_korea_box_eight_start_box_fuor_small_box_title{
+        width: 248.6px;
+        height: 120px;
+        padding: 0 15px 0 0;
+        margin: 5px 0 0 0;
+        font-size: 32px;
+        color: #262626;
+        margin: 20px 0px 10px 15px;
+        line-height: 40px;
+    }
+    .bmw_korea_box_eight_start_box_fuor_small_box_message{
+        font-size: 16px;
+        margin: 15px 0px 5px 10px;
+        line-height: 27px;
+    }
+    #four_check{
+        margin: 15px 0 0 10px;
+    }
+    #five_check{
+        margin: 55px 0 0 12px;
+    }
+    #six_check{
+        margin: 85px 0 0 10px;
+    }
+    #four_down{
+        margin: -70px 0 0 10px;
+    }
+    #four_title_one{
+        margin: -32px 0 0 12px;
+    }
+    #small_dr_ct{
+        margin: 5px 10px 0 0;
+    }
+    #vantage{
+        line-height: 40px;
+    }
+    #fiv_down{
+        margin: -27px 0 0 10px;
+        line-height: 23px;
+    }
+    #seven_check{
+        margin: 30px 0 0 10px;
+    }
+    #eight_check{
+        margin: 100px 0 0 10px;
+    }
+    #nine_check{
+        margin: 55px 0 0 10px;
+    }
+    #ten_check{
+        margin: 80px 0 0 10px;
+    }
+    #ele_check{
+        margin: 80px 0 0 10px;
+    }
+    #twelv_check{
+        margin: 60px 0 0 10px;
+    }
+    #thirte_check{
+        margin: 80px 0 0 10px;
+    }
+    #six_down{
+        margin: 25px 0 0 10px;
+    }
+    #fourt_check{
+        margin: 30px 0 0 10px;
+    }
+    .KOREA_BMW_YELLOW_AND_BLACK_SUITE_AND_1000{
+        width: 100%;
+        max-width: 1223px;
+        height: 156px;
+        margin: 0 auto;
+    }
+    .KOREA_BMW_YELLOW_AND_BLACK_SUITE_AND_1000_bmw{
+        display: inline-table;
+        vertical-align: middle;
+        width: 185px;
+        height: 139.97px;
+        padding: 0 20px;
+        background-color: #f2f2f2;
+        margin: 50px 10px 0 0;
+        cursor: pointer;
+    }
+    .KOREA_BMW_YELLOW_AND_BLACK_SUITE_AND_1000_bmw:hover{
+        background-color: #a9a6a67b;
+    }
+    .moonsm{
+        width: 1223px;
+        height: 155px;
+    }
+    .KOREA_BMW_YELLOW_AND_BLACK_SUITE_AND_1000_icon{
+        text-align: center;
+        font-size: 27px;
+        height: 120px;
+        line-height: 120px;
+    }
+    .KOREA_BMW_YELLOW_AND_BLACK_SUITE_AND_1000_yellow_and_black{
+        font-size: 20px;
+        text-align: center;
+        position: relative;
+        top: -20px;
+        font-weight: 500;
+    }
+    .zero_1{
+        width: 100%;
+        height: 471px;
+        background-color: #e6e6e6;
+        margin: -110px 0 0 0;
+    }
+    .zero_1_go_leagoflefend{
+        width: 1200px;
+        height: 471px;
+        margin: 0 auto;
+    }
+    .zero_1_go_leagoflefend_fushong_shot_dododo{
+        width: 1200px;
+        height: 50px;
+        position: relative;
+        top: 50px;
+        border-bottom: 1px solid rgba(129, 126, 126, 0.422);
+    }
+    .suaaaaa_wow_getthebmw_and_wanthouse_world_where{
+        width: 1210px;
+        height: 272px;
+        padding: 45px 0;
+        /* margin: 0 20px; */
+        position: relative;
+        top: 51px;
+    }
+    .bmw_m8_yellow_one{
+        width: 173.94px;
+        height: 272px;
+        padding: 0 10px;
+        display: inline-table;
+        vertical-align: middle;
+    }
+    .thisyeardrivethebmwm8yello_one{
+        width: 175.94px;
+        height: 28px;
+        margin: 0 0 16px 0;
+        font-size: 20px;
+    }
+    .ihavethebmw_key_one{
+        width: 175.94px;
+        height: 120px;
+        padding: 15px 0 30px;
+        font-size: 14px;
+        display: inline-table;
+        vertical-align: middle;
+    }
+    .ihavethebmw_key_one div{
+        margin: 0 0 5px 0;
+        cursor: pointer;
+    }
+    .ihavethebmw_key_one div:hover{
+        font-weight: 700;
+    }
+    .bmw_m8_yellow_two{
+        width: 303.74px;
+        height: 271.81px;
+        display: inline-table;
+        vertical-align: middle;
+    }
+    .thisyeardrivethebmwm8yello_two{
+        width: 299.74px;
+        height: 27.98px;
+        margin: 0 0 16px 0;
+        font-size: 20px;
+    }
+    .ihavethebmw_key_two{
+        width: 303.74px;
+        height: 116.93px;
+        padding: 15px 0 30px 0;
+        margin: 0 0 15px 0;
+        font-size: 14px;
+    }
+    .ihavethebmw_key_two div{
+        margin: 0 0 5px 0;
+        cursor: pointer;
+    }
+    .ihavethebmw_key_two div:hover{
+        font-weight: 700;
+    }
+    .bmw_m8_yellow_three{
+        display: inline-table;
+        vertical-align: middle;
+        width: 175.81px;
+        height: 271.81px;
+    }
+    .thisyeardrivethebmwm8yello_three{
+        width: 175.81px;
+        height: 27.98px;
+        font-size: 20px;
+        margin: 0 0 16px 0;
+    }
+    .ihavethebmw_key_three{
+        width: 175.81px;
+        height: 167.84px;
+        padding: 15px 0 30px 0;
+        margin: 0 0 15px 0;
+        font-size: 14px;
+    }
+    .ihavethebmw_key_three div{
+        margin: 0 0 5px 0;
+        cursor: pointer;
+    }
+    .ihavethebmw_key_three div:hover{
+        font-weight: 700;
+    }
+    .bmw_m8_yellow_four{
+        display: inline-table;
+        vertical-align: middle;
+        width: 240.68px;
+        height: 271.81px;
+    }
+    .thisyeardrivethebmwm8yello_four{
+        width: 240.68px;
+        height: 27.98px;
+        margin: 0 0 16px 0;
+        font-size: 20px;
+    }
+    .ihavethebmw_key_four{
+        width: 240.68px;
+        height: 143.86px;
+        padding: 15px 0 30px 0;
+        margin: 0 0 15px 0;
+        font-size: 14px;
+    }
+    .ihavethebmw_key_four div{
+        margin: 0 0 5px 0;
+        cursor: pointer;
+    }
+    .ihavethebmw_key_four div:hover{
+        font-weight: 700;
+    }
+    .ihavethebmw_key_five div:hover{
+        font-weight: 700;
+    }
+    .bmw_m8_yellow_five{
+        display: inline-table;
+        vertical-align: middle;
+        width: 207.89px;
+        height: 271.81px;
+    }
+    .thisyeardrivethebmwm8yello_five{
+        width: 267.89px;
+        height: 27.98px;
+        font-size: 20px;
+        margin: 0 0 16px 0;
+    }
+    .ihavethebmw_key_five{
+        width: 267.89px;
+        height: 47.95px;
+        padding: 15px 0 30px 0;
+        margin: 0 0 15px 0;
+        font-size: 14px;
+    }
+    .ihavethebmw_key_five div{
+        margin: 0 0 5px 0;
+        cursor: pointer;
+    }
+    .youwantyouwillbe{
+        width: 100%;
+        max-width: 1200px;
+        height: 80px;
+        margin: 0 auto;
+    }
+    .youwantyouwillbe_123{
+        width: 1160px;
+        height: 20px;
+        padding: 30px 20px;
+    }
+    .youwantyouwillbe_123456{
+        display: inline-table;
+        vertical-align: middle;
+        font-size: 14px;
+    }
+    .youwantyouwillbe_123456789{
+        display: inline-table;
+        vertical-align: middle;
+        float: right;
+        color: #1366d7;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    .youwantyouwillbe_12345678901234{
+        display: inline-table;
+        vertical-align: middle;
+        padding: 0 10px;
+    }
+    .youwantyouwillbe_123456789op{
+        display: inline-table;
+        vertical-align: middle;
+        padding: 0 10px;
+    }
+    .javascript_two_box_two{
+        margin: 0 0 10px 50px;
+    }
+    .javascript_two_box_two_title{
+        font-size: 20rem;
+    }
+    .javascript_two_box_two_type{
+        font-size: 12rem;
+        margin: 10px 0 25px 0;
+    }
+    .javascript_two_box_three{
+        font-size: 16rem;
+        margin: 0 0 0 50px;
+    }
+    .javascript_two_box_three_icon{
+        display: inline-table;
+        vertical-align: middle;
+    }
+    .javascript_two_box_three_owner{
+        display: inline-table;
+        vertical-align: middle;
+    }
+    .javascript_three_box_in{
+        display: inline-table;
+        vertical-align: middle;
+        transition: all 5s;
+        margin: 0 -50px 0 40px;
+    }
+    .javascript_three_box_type_one{
+        font-size: 20rem;
+    }
+    .javascript_three_box_type_two{
+        font-size: 12rem;
+        margin: 10px 0 20px 0;
+    }
+    .javascript_three_box_onwer{
+        font-size: 16rem;
+    }
+    .new3_or_m5_or_m5_m8{
+        width: 100%;
+        height: 60px;
+        background-color: #ffffff;
+        position: fixed;
+        bottom: 0;
+        z-index: 9;
+    }
+    .m5first{
+        width: 100%;
+        max-width: 650px;
+        margin: 0 auto;
+        height: 60px;
+        background-color: #ffffff;
+    }
+    .icon__menu{
+        display: none;
+    }
+    .m5first_box{
+        width: 24.5%;
+        display: inline-table;
+        vertical-align: middle;
+        text-align: center;
+    }
+    .m5first_icon{
+        font-size: 20rem;
+        line-height: 50rem;
+        margin: 0 0 -10px 0;
+    }
+    .m5first_name{
+        font-size: 10rem;
+    }
+    .icon__menu{
+        position: relative;
+        top: -15px;
+        left: -10px;
+    }
+    .icon_one{
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+    .icon_two{
+        color: white;
+        position: relative;
+        left: 60px;
+        top: 200px;
+        font-size: 20rem;
+        width: 30px;
+        height: 30px;
+        display: none;
+        cursor: pointer;
+    }
+    .icon_three{
+        color: white;
+        position: relative;
+        left: 100px;
+        top: -20px;
+        width: 30px;
+        height: 30px;
+        font-size: 20rem;
+        display: none;
+        cursor: pointer;
+    }
+    .icon__menu{
+        width: 30%;
+    }
+    .trybmw{
+        width: 100%;
+        height: 756px;
+    }
+    .all_box{
+        width: 100%;
+        position: relative;
+        top: -100px;
+    }
+    .javascript_four_box{
+        opacity: 0;
+    }
+    .javascript_four_box_card{
+        margin: 0 0 0 45px;
+        display: inline-table;
+        vertical-align: middle;
+    }
+    .javascript_four_box_series{
+        font-size: 20rem;
+    }
+    .javascript_four_box_type{
+        margin: 10px 0 20px 0;
+    }
+    .javascript_four_box_onwer{
+        font-size: 16rem;
+        font-weight: bold;
+    }
+    .javascript_four_box{
+        position: absolute;
+        top: 80px;
+    }
+    .javascript_four_box_icon{
+        display: inline-table;
+        vertical-align: middle;
+    }
+    .javascript_four_box_name{
+        display: inline-table;
+        vertical-align: middle;
+    }
+    .javascript_five_box_owner_icon{
+        display: inline-table;
+        vertical-align: middle;
+    }
+    .javascript_five_box_owner_name{
+        display: inline-table;
+        vertical-align: middle;
+    }
+    .javascript_five_box_one_mediumbox_onwer_icon{
+        display: inline-table;
+        vertical-align: middle;
+    }
+    .javascript_five_box_one_mediumbox_onwer_make{
+        display: inline-table;
+        vertical-align: middle;
+    }
+    .javascript_five_box_onwer_icon{
+        display: inline-table;
+        vertical-align: middle;
+    }
+    .javascript_five_box_onwer_name{
+        display: inline-table;
+        vertical-align: middle;
+    }
+    .jabascript_five_box_owner_icon{
+        display: inline-table;
+        vertical-align: middle;
+    }
+    .jabascript_five_box_owner_make{
+        display: inline-table;
+        vertical-align: middle;
+    }
+    .jabascript_five_box_owner_icon{
+        display: inline-table;
+        vertical-align: middle;
+    }
+    .jabascript_five_box_owner_name{
+        display: inline-table;
+        vertical-align: middle;
+    }
+    .javascript_five_box_two_mediumbox_icon{
+        display: inline-table;
+        vertical-align: middle;
+    }
+    .javascript_five_box_two_mediumbox_make{
+        display: inline-table;
+        vertical-align: middle;
+    }
+    .button_one{
+        width: 100px;
+        height: 100px;
+    }
+    .button_two{
+        width: 100px;
+        height: 100px;
+    }
+    .button_three{
+        width: 100px;
+        height: 100px;
+    }
+    .content_one{
+        opacity: 0;
+    }
+    .content_two{
+        opacity: 0;
+    }
+
+    .content_three{
+        opacity: 0;
+    }
+
+    .content_entire_visible{
+        opacity: 1;
+        transition: 2s;
+    }
+    .content_hide{
+        visibility: hidden;
+    }
+    .javascript_five_box{
+        opacity: 0;
+        position: absolute;
+        top: 80px;
+    }
+    .javascript_five_box_one_mediumbox{
+        display: inline-table;
+        vertical-align: middle;
+    }
+    .javascript_five_box_two_mediumbox{
+        display: inline-table;
+        vertical-align: middle;
+    }
+    .entire_visible{
+        opacity: 1;
+        transition: 2s;
+    }
+    /* responsive */
+
+    /* head */
+    @media screen and (max-width:990px){
+        .head_menu_one{
+            display: none;
+        }
+        .icon__menu{
+            display: block;
+        }
+        .icon_one{
+            display: block;
+            font-size: 20rem;
+            color: #ffffff;
+            position: relative;
+            top: 38px;
+            left: 20px;
+        }
+    }
+    @media screen and (max-width:770px){
+        .icon__menu{
+            display: block;
+        }
+        .head_menu_two{
+            display: none;
+        }
+        .head_menu_three{
+            position: relative;
+            left: -20px;
+        }
+        .head_menu_three img{
+            width: 40px;
+            height: 40px;
+        }
+        .icon_one{
+            display: block;
+        }
+        .icon_two{
+            display: block;
+            top: 10px;
+        }
+        .icon_three{
+            font-size: 20rem;
+            color: white;
+            display: block;
+            top: -17px;
+            position: relative;
+        }
+    }
+
+    /* head jquery */
+    @media screen and (min-width:100px) and (max-width:2000px){
+        #background{
+
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="head_box">
+        <div class="head_menu_entire">
+            <div class="head_menu">
+
+                    <div class="head_menu_one">
+                        <div class="menu_one" id="menu_one_one">Models</div>
+                        <div class="menu_one" id="menu_one_two">Find & Buy</div>
+                        <div class="menu_one" id="menu_one_three">Electromobility</div>
+                        <div class="menu_one" id="menu_one_four">Services</div>
+                        <div class="menu_one" id="menu_one_five">Discover</div>
+                    </div>
+
+                    <div class="icon__menu">
+                        <div class="icon_one"><i class="fa-solid fa-bars"></i></div>
+                        <div class="icon_two"><i class="fa-solid fa-user"></i></div>
+                        <div class="icon_three"><i class="fa-solid fa-cart-shopping"></i></div>
+                    </div>
+
+                    <div class="head_menu_two_list">
+                        <div class="head_menu_two">
+                            <div class="menu_two"><i class="fa-solid fa-magnifying-glass"></i></div>
+                            <div class="menu_two"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="menu_two"><i class="fa-solid fa-user"></i></div>
+                            <div class="menu_two"><i class="fa-solid fa-cart-shopping"></i></div> 
+                        </div>
+
+                        <div class="head_menu_three"><img src="../HomePage_BMW-10-13/imgs/BMW_White_Logo.svg" alt=""></div>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="all_box">
+        <div class="head_background">
+            <!--  -->
+            <div class="head_menu_three_line"></div>
+            <div class="head_menu_three_line_blue"></div>
+
+            <!-- <hr> -->
+            <div class="head_menu_sheer">Sheer Driving <b>Pleasure</b></div>
+            <div class="head_menu_sub_list">  
+                <div class="head_menu_sub">THE NEW 3</div>
+                <div class="head_menu_find">모델 정보</div>
+            </div>  
+        </div>
+
+        <!-- javascript -->
+        <div id="menu_one_one_background">
+            <div id="background">
+
+                <div id="background_head">
+
+                    <div id="background_head_twp" class="javascript_one">전체</div>
+                    <div id="background_head_twp" class="javascript_two">1</div>
+                    <div id="background_head_twp" class="javascript_three">2</div>
+                    <div id="background_head_twp" class="javascript_four">3</div>
+                    <div id="background_head_twp" class="javascript_five">4</div>
+                    <div id="background_head_twp" class="javascript_six">5</div>
+                    <div id="background_head_twp" class="javascript_seven">6</div>
+                    <div id="background_head_twp" class="javascript_eight">7</div>
+                    <div id="background_head_twp" class="javascript_nine">8</div>
+                    <div id="background_head_twp" class="javascript_ten">Z</div>
+                    <div id="background_head_twp" class="javascript_eleven">i</div>
+                    <div id="background_head_twp" class="javascript_twelve">X</div>
+                    <div id="background_head_twp" class="javascript_thirteen">M</div>
+
+                    <!-- <div class="mmmm">m</div> -->
+                    <div id="menu_one_one_close"><i class="fa-solid fa-xmark"></i></div>
+
+                </div>
+
+                <div id="background_head_line"></div>
+
+
+            <!-- js entire -->
+            <div class="js_entire">
+                <!-- javascript click event one-->
+                <div class="background_bmw_m8">
+                    <div id="background_bmw_m8_yellow_is_mine_thisyear">All Models</div>
+                    <div id="background_bmw_m8_yellow_is_mine_ihavethebmwkey_one"><img src="../HomePage_BMW-10-13/imgs/street.webp" alt=""></div>
+                    <div id="background_bmw_m8_yellow_is_mine_ihavethebmwkey_two"><img src="../HomePage_BMW-10-13/imgs/yellow.webp" alt=""></div>
+                    <div id="background_bmw_m8_yellow_is_mine_ihavethebmwkey_three"><img src="../HomePage_BMW-10-13/imgs/white.webp" alt=""></div>
+                    <div id="background_bmw_m8_yellow_is_mine_ihavethebmwkey_four"><img src="../HomePage_BMW-10-13/imgs/black.webp" alt=""></div>
+                    <div id="background_bmw_m8_yellow_is_mine_whypickthebmwbecauselooklikestrong">BMW의 모든 모델 보기</div>
+                </div>
+
+                
+                <!-- two -->
+                <div class="javascript_two_box">
+                    <div class="javascript_two_box_one"><img src="../HomePage_BMW-10-13/imgs/jv_1.webp" alt=""></div>
+
+                    <div class="javascript_two_box_two">
+                        <div class="javascript_two_box_two_title">BMW 1시리즈</div>
+                        <div class="javascript_two_box_two_type">가솔린 ∙ 디젤</div>
+                    </div>
+
+                    <div class="javascript_two_box_three">
+                        <div class="javascript_two_box_three_box">
+                            <div class="javascript_two_box_three_icon"><i class="fa-solid fa-angle-right"></i></div>
+                            <div class="javascript_two_box_three_owner">내 차량 만들기</div>
+                        </div>
+                        <div class="javascript_two_box_three_box">
+                            <div class="javascript_two_box_three_icon"><i class="fa-solid fa-angle-right"></i></div>
+                            <div class="javascript_two_box_three_owner">내 차량 찾기</div>
+                        </div>
+                        <div class="javascript_two_box_three_box">
+                            <div class="javascript_two_box_three_icon"><i class="fa-solid fa-angle-right"></i></div>
+                            <div class="javascript_two_box_three_owner">자세히 보기</div>
+                        </div>
+                        <!-- > + ~ $ % & -  -->
+                    </div>
+
+                </div> 
+
+                <!-- three -->
+                <div class="javascript_three_box">
+                    <div class="javascript_three_box_in">
+                        <div class="javascript_three_box_img"><img src="../HomePage_BMW-10-13/imgs/jv_2.webp" alt=""></div>
+                        <div class="javascript_three_box_type">
+                            <div class="javascript_three_box_type_one">BMW 뉴 2시리즈 액티브 투어러</div>
+                            <div class="javascript_three_box_type_two">디젤</div>
+                        </div>
+                        <div class="javascript_three_box_onwer">
+                            <div class="javascript_three_box_icon"><i class="fa-solid fa-angle-right"></i></div>
+                            <div class="javascript_three_box_number">내 차량 만들기</div>
+                        </div>
+                        <div class="javascript_three_box_onwer">
+                            <div class="javascript_three_box_icon"><i class="fa-solid fa-angle-right"></i></div>
+                            <div class="javascript_three_box_number">지세히 보기</div>
+                        </div>
+                    </div>
+                    <div class="javascript_three_box_in">
+                        <div class="javascript_three_box_img"><img src="../HomePage_BMW-10-13/imgs/jv_3.webp" alt=""></div>
+                        <div class="javascript_three_box_type">
+                            <div class="javascript_three_box_type_one">BMW M249i xDrive 쿠페</div>
+                            <div class="javascript_three_box_type_two">가솔린</div>
+                        </div>
+                        <div class="javascript_three_box_onwer">
+                            <div class="javascript_three_box_icon"><i class="fa-solid fa-angle-right"></i></div>
+                            <div class="javascript_three_box_number">내 차량 만들기</div>
+                        </div>
+                        <div class="javascript_three_box_onwer">
+                            <div class="javascript_three_box_icon"><i class="fa-solid fa-angle-right"></i></div>
+                            <div class="javascript_three_box_number">자세히 보기</div>
+                        </div>
+                    </div>
+                    <div class="javascript_three_box_in">
+                        <div class="javascript_three_box_img"><img src="../HomePage_BMW-10-13/imgs/jv_4.webp" alt=""></div>
+                        <div class="javascript_three_box_type">
+                            <div class="javascript_three_box_type_one">BMW 2시리즈 그란 쿠페</div>
+                            <div class="javascript_three_box_type_two">가솔린 ∙ 디젤</div>
+                        </div>
+                        <div class="javascript_three_box_onwer">
+                            <div class="javascript_three_box_icon"><i class="fa-solid fa-angle-right"></i></div>
+                            <div class="javascript_three_box_number">내 차량 만들기</div>
+                        </div>
+                        <div class="javascript_three_box_onwer">
+                            <div class="javascript_three_box_icon"><i class="fa-solid fa-angle-right"></i></div>
+                            <div class="javascript_three_box_number">내 차량 찾기</div>
+                        </div>
+                        <div class="javascript_three_box_onwer">
+                            <div class="javascript_three_box_icon"><i class="fa-solid fa-angle-right"></i></div>
+                            <div class="javascript_three_box_number">자세히 보기</div>
+                        </div>
+                    </div>
+                    <div class="javascript_three_box_in">
+                        <div class="javascript_three_box_img"><img src="../HomePage_BMW-10-13/imgs/jv_5.webp" alt=""></div>
+                        <div class="javascript_three_box_type">
+                            <div class="javascript_three_box_type_one">BMW M2 컴페티션</div>
+                            <div class="javascript_three_box_type_two">가솔린</div>
+                        </div>
+                        <div class="javascript_three_box_onwer">
+                            <div class="javascript_three_box_icon"><i class="fa-solid fa-angle-right"></i></div>
+                            <div class="javascript_three_box_number">내 차량 찾기</div>
+                        </div>
+                        <div class="javascript_three_box_onwer">
+                            <div class="javascript_three_box_icon"><i class="fa-solid fa-angle-right"></i></div>
+                            <div class="javascript_three_box_number">자세히 보기</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- four -->
+                <div class="javascript_four_box">
+                    <div class="javascript_four_box_card">
+                        <div class="javascript_four_box_img">
+                            <div class="javascript_four_box_img_one"><img src="../HomePage_BMW-10-13/imgs/jv_6.webp" alt=""></div>
+                        </div>
+                        <div class="javascript_four_box_title">
+                            <div class="javascript_four_box_series">BMW 뉴 3시리즈</div>
+                            <div class="javascript_four_box_type">가솔린 ∙ 디젤 ∙ <span>플러그인 하이브리드</span></div>
+                        </div>
+                        <div class="javascript_four_box_onwer">
+                            <div class="javascript_four_box_icon"><i class="fa-solid fa-angle-right"></i></div>
+                            <div class="javascript_four_box_name">내 차량 만들기</div>
+                        </div>
+                        <div class="javascript_four_box_onwer">
+                            <div class="javascript_four_box_icon"><i class="fa-solid fa-angle-right"></i></div>
+                            <div class="javascript_four_box_name">자세히 보기</div>
+                        </div>
+                    </div>
+                    <div class="javascript_four_box_card">
+                        <div class="javascript_four_box_img">
+                            <div class="javascript_four_box_img_one"><img src="../HomePage_BMW-10-13/imgs/jv_7.webp" alt=""></div>
+                        </div>
+                        <div class="javascript_four_box_title">
+                            <div class="javascript_four_box_series">BMW 뉴 3시리즈 투어링</div>
+                            <div class="javascript_four_box_type">가솔린 ∙ 디젤 </div>
+                        </div>
+                        <div class="javascript_four_box_onwer">
+                            <div class="javascript_four_box_icon"><i class="fa-solid fa-angle-right"></i></div>
+                            <div class="javascript_four_box_name">내 차량 만들기</div>
+                        </div>
+                        <div class="javascript_four_box_onwer">
+                            <div class="javascript_four_box_icon"><i class="fa-solid fa-angle-right"></i></div>
+                            <div class="javascript_four_box_name">자세히 보기</div>
+                        </div>
+                    </div>
+                    <div class="javascript_four_box_card">
+                        <div class="javascript_four_box_img">
+                            <div class="javascript_four_box_img_one"><img src="../HomePage_BMW-10-13/imgs/jv_8.webp" alt=""></div>
+                        </div>
+                        <div class="javascript_four_box_title">
+                            <div class="javascript_four_box_series">BMW M3 컴페티션</div>
+                            <div class="javascript_four_box_type">가솔린</div>
+                        </div>
+                        <div class="javascript_four_box_onwer">
+                            <div class="javascript_four_box_icon"><i class="fa-solid fa-angle-right"></i></div>
+                            <div class="javascript_four_box_name">내 차량 만들기</div>
+                        </div>
+                        <div class="javascript_four_box_onwer">
+                            <div class="javascript_four_box_icon"><i class="fa-solid fa-angle-right"></i></div>
+                            <div class="javascript_four_box_name">내 차량 찾기</div>
+                        </div>
+                        <div class="javascript_four_box_onwer">
+                            <div class="javascript_four_box_icon"><i class="fa-solid fa-angle-right"></i></div>
+                            <div class="javascript_four_box_name">자세히 보기</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- five -->
+                <div class="javascript_five_box">
+                    <div class="javascript_five_box_one">
+                        <div class="javascript_five_box_one_mediumbox">
+                            <div class="javascript_five_box_one_mediumbox_img"><img src="../HomePage_BMW-10-13/imgs/jv_9.webp" alt=""></div>
+                            <div class="javascript_five_box_one_mediumbox_title">
+                                <div class="javascript_five_box_one_mediumbox_name">BMW 4 시리즈 쿠페</div>
+                                <div class="javascript_five_box_one_mediumbox_type">가솔린 • 디젤 </div>
+                            </div>
+                            <div class="javascript_five_box_one_mediumbox_onwer">
+                                <div class="javascript_five_box_one_mediumbox_onwer_icon"><i class="fa-solid fa-angle-right"></i></div>
+                                <div class="javascript_five_box_one_mediumbox_onwer_make">내 차량 만들기</div>
+                            </div>
+                            <div class="javascript_five_box_onwer">
+                                <div class="javascript_five_box_onwer_icon"><i class="fa-solid fa-angle-right"></i></div>
+                                <div class="javascript_five_box_onwer_name">내 차량 찾기</div>
+                            </div>
+                            <div class="javascript_five_box_onwer">
+                                <div class="javascript_five_box_onwer_icon"><i class="fa-solid fa-angle-right"></i></div>
+                                <div class="javascript_five_box_onwer_name">자세히 보기</div>
+                            </div>
+                        </div>
+                        <div class="javascript_five_box_one_mediumbox">
+                            <div class="javascript_five_box_one_mediumbox_img"><img src="../HomePage_BMW-10-13/imgs/jv_10.webp" alt=""></div>
+                            <div class="javascript_five_box_one_mediumbox_title">
+                                <div class="javascript_five_box_one_mediumbox_name">BMW 4 시리즈 그란 쿠페</div>
+                                <div class="javascript_five_box_one_mediumbox_type">가솔린 • 디젤</div>
+                            </div>
+                            <div class="javascript_five_box_one_mediumbox_onwer">
+                                <div class="javascript_five_box_one_mediumbox_onwer_icon"><i class="fa-solid fa-angle-right"></i></div>
+                                <div class="javascript_five_box_one_mediumbox_onwer_make">내 차량 만들기</div>
+                            </div>
+                            <div class="jabascript_five_box_owner">
+                                <div class="jabascript_five_box_owner_icon"><i class="fa-solid fa-angle-right"></i></div>
+                                <div class="jabascript_five_box_owner_name">내 차량 찾기</div>
+                            </div>
+                            <div class="jabascript_five_box_owner">
+                                <div class="jabascript_five_box_owner_icon"><i class="fa-solid fa-angle-right"></i></div>
+                                <div class="jabascript_five_box_owner_name">자세히 보기</div>
+                            </div>
+                        </div>
+                        <div class="javascript_five_box_one_mediumbox">
+                            <div class="javascript_five_box_one_mediumbox_img"><img src="../HomePage_BMW-10-13/imgs/jv_11.webp" alt=""></div>
+                            <div class="javascript_five_box_one_mediumbox_title">
+                                <div class="javascript_five_box_one_mediumbox_name">BMW 4시리즈 컨버터블</div>
+                                <div class="javascript_five_box_one_mediumbox_type">가솔린</div>
+                            </div>
+                            <div class="javascript_five_box_one_mediumbox_onwer">
+                                <div class="javascript_five_box_one_mediumbox_onwer_icon"><i class="fa-solid fa-angle-right"></i></div>
+                                <div class="javascript_five_box_one_mediumbox_onwer_make">내 차량 만들기</div>
+                            </div>
+                            <div class="javascript_five_box_owner">
+                                <div class="javascript_five_box_owner_icon"><i class="fa-solid fa-angle-right"></i></div>
+                                <div class="javascript_five_box_owner_name">내 차량 찾기</div>
+                            </div>
+                            <div class="javascript_five_box_owner">
+                                <div class="javascript_five_box_owner_icon"><i class="fa-solid fa-angle-right"></i></div>
+                                <div class="javascript_five_box_owner_name">자세히 보기</div>
+                            </div>
+                        </div>
+                        <div class="javascript_five_box_one_mediumbox">
+                            <div class="javascript_five_box_one_mediumbox_img"><img src="../HomePage_BMW-10-13/imgs/jv_12.webp" alt=""></div>
+                            <div class="javascript_five_box_one_mediumbox_title">
+                                <div class="javascript_five_box_one_mediumbox_name">BMW i4</div>
+                                <div class="javascript_five_box_one_mediumbox_type">순수전기</div>
+                            </div>
+                            <div class="javascript_five_box_one_mediumbox_onwer">
+                                <div class="javascript_five_box_one_mediumbox_onwer_icon"><i class="fa-solid fa-angle-right"></i></div>
+                                <div class="javascript_five_box_one_mediumbox_onwer_make">내 차량 만들기</div>
+                            </div>
+                            <div class="javascript_five_box_onwer">
+                                <div class="javascript_five_box_onwer_icon"><i class="fa-solid fa-angle-right"></i></div>
+                                <div class="javascript_five_box_onwer_name">자세히 보기</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="javascript_five_box_two">
+                        <div class="javascript_five_box_two_mediumbox">
+                            <div class="javascript_five_box_two_mediumboximg"><img src="../HomePage_BMW-10-13/imgs/jv_13.webp" alt=""></div>
+                            <div class="javascript_five_box_two_mediumbox_title">
+                                <div class="javascript_five_box_two_mediumbox_name">BMW M4 컴패티션</div>
+                                <div class="javascript_five_box_two_mediumbox_type">가솔린</div>
+                            </div>
+                            <div class="javascript_five_box_two_mediumbox_onwer">
+                                <div class="javascript_five_box_two_mediumbox_icon"><i class="fa-solid fa-angle-right"></i></div>
+                                <div class="javascript_five_box_two_mediumbox_make">내 차량 만들기</div>
+                            </div>
+                            <div class="javascript_five_box_owner">
+                                <div class="javascript_five_box_owner_icon"><i class="fa-solid fa-angle-right"></i></div>
+                                <div class="javascript_five_box_owner_name">내 차량 찾기</div>
+                            </div>
+                            <div class="javascript_five_box_owner">
+                                <div class="javascript_five_box_owner_icon"><i class="fa-solid fa-angle-right"></i></div>
+                                <div class="javascript_five_box_owner_name">자세히 보기</div>
+                            </div>
+                        </div>
+                        <div class="javascript_five_box_two_mediumbox">
+                            <div class="javascript_five_box_two_mediumboximg"><img src="../HomePage_BMW-10-13/imgs/jv_14.webp" alt=""></div>
+                            <div class="javascript_five_box_two_mediumbox_title">
+                                <div class="javascript_five_box_two_mediumbox_name">BMW M4 컴페티션 컨버터블</div>
+                                <div class="javascript_five_box_two_mediumbox_type">가솔린</div>
+                            </div>
+                            <div class="javascript_five_box_two_mediumbox_onwer">
+                                <div class="javascript_five_box_two_mediumbox_icon"><i class="fa-solid fa-angle-right"></i></div>
+                                <div class="javascript_five_box_two_mediumbox_make">내 차량 만들기</div>
+                            </div>
+                            <div class="javascript_five_box_onwer">
+                                <div class="javascript_five_box_onwer_icon"><i class="fa-solid fa-angle-right"></i></div>
+                                <div class="javascript_five_box_onwer_name">내 차량 찾기</div>
+                            </div>
+                            <div class="javascript_five_box_onwer">
+                                <div class="javascript_five_box_onwer_icon"><i class="fa-solid fa-angle-right"></i></div>
+                                <div class="javascript_five_box_onwer_name">자세히 보기</div>
+                            </div>
+                        </div>
+                        <div class="javascript_five_box_two_mediumbox">
+                            <div class="javascript_five_box_two_mediumboximg"><img src="../HomePage_BMW-10-13/imgs/jv_15.webp" alt=""></div>
+                            <div class="javascript_five_box_two_mediumbox_title">
+                                <div class="javascript_five_box_two_mediumbox_name">BMW i4 M50</div>
+                                <div class="javascript_five_box_two_mediumbox_type">순수전기</div>
+                            </div>
+                            <div class="javascript_five_box_two_mediumbox_onwer">
+                                <div class="javascript_five_box_two_mediumbox_make"><i class="fa-solid fa-angle-right"></i></div>
+                                <div class="javascript_five_box_two_mediumbox_make">내 차량 만들기</div>
+                            </div>
+                            <div class="javascript_five_box_owner">
+                                <div class="javascript_five_box_owner_icon"><i class="fa-solid fa-angle-right"></i></div>
+                                <div class="javascript_five_box_owner_name">자세히 보기</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- js entire -->
+
+                <div id="arrow">
+                    <div id="arrow_good">
+                        <div id="good_icon"><i class="fa-solid fa-car"></i></div>
+                        <div id="good_yes">시승 신청</div>
+                    </div>
+                    <div id="arrow_good">
+                        <div id="good_icon"><i class="fa-solid fa-note-sticky"></i></div>
+                        <div id="good_yes">카탈로그 다운로드</div>
+                    </div>
+                    <div id="arrow_good">
+                        <div id="good_icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div id="good_yes">딜러 위치</div>
+                    </div>
+                    <div id="arrow_good">
+                        <div id="good_icon"><i class="fa-regular fa-file-zipper"></i></div>
+                        <div id="good_yes">가격표</div>
+                    </div>
+                    <div id="arrow_good">
+                        <div id="good_icon"><i class="fa-solid fa-car-side"></i></div>
+                        <div id="good_yes">내 차량 찾기</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  -->
+        <div class="main_two_area">
+                <div class="main_one_section">
+                    <div class="main_one_section_box">
+                        <div class="main_one_title">BMW 뉴 M850i xDrive 그란 쿠페</div>
+                        <div class="main_one_find">모델 정보</div>
+                    </div>
+                </div>
+
+            <div class="main_two_section">
+                <div class="main_two_section_box">
+                    <div class="main_two_title">THE NEW 7</div>
+                    <div class="main_two_find">모델 정보</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- border line -->
+
+        <!-- <div class="main_three_area">
+            <div class="main_three_card" id="favorite">즐겨찾기.</div>
+            <div class="main_three_card">
+                <div class="icon"><i class="fa-solid fa-car"></i></div>
+                <div class="card">내 차량 만들기</div>
+                <div class="box"></div>
+            </div>
+            <div class="main_three_card">
+                <div class="icon"><i class="fa-solid fa-newspaper"></i></div>
+                <div class="card">가격표</div>
+                <div class="o"></div>
+            </div>
+            <div class="main_three_card">
+                <div class="icon"><i class="fa-solid fa-newspaper"></i></div>
+                <div class="card">금융 프로모션</div>
+                <div class="o"></div>
+            </div>
+            <div class="main_three_card">
+                <div class="moon">moon</div>
+            </div>
+        </div> -->
+
+        <!-- <div class="main_third">
+            <div class="main_third_one">
+            </div>
+        </div> -->
+
+        <div class="korea_bmw">
+            <div class="korea_bmw_middle">
+                <div class="korea_bmw_middle_main">
+                    <!-- <div class="left_bmw"><div class="left_bmw_m8"></div></div> -->
+                    <div class="korea_bmw_middle_main_one"><div>즐겨찾기.</div></div>
+                    <div class="korea_bmw_middle_main_two">
+                        <div class="korea_bmw_middle_main_two_icon"><i class="fa-solid fa-car"></i></div>
+                        <div class="korea_bmw_middle_main_two_car">내 차량 만들기</div>
+                    </div>
+                    <div class="korea_bmw_middle_main_three">
+                        <div class="korea_bmw_middle_main_three_icon"><i class="fa-regular fa-note-sticky"></i></div>
+                        <div class="korea_bmw_middle_main_three_button">가격표</div>
+                    </div>
+                    <div class="korea_bmw_middle_main_four">
+                        <div class="korea_bmw_middle_main_three_icon"><i class="fa-regular fa-comment-dots"></i></div>
+                        <div class="korea_bmw_middle_main_three_button">금융 프로모션</div>
+                    </div>
+                </div>
+                <!-- <div class="gi123"></div> -->
+            </div>
+        </div>
+
+    <div class="korea_margin">
+        <div class="bmw_korea_box_fourth">
+            <div class="bmw_korea_box_fourth_start">
+
+                <div class="bmw_korea_box_fourth_1">
+                    <div class="bmw_korea_box_fourth_1_series">시리즈</div>
+                    <div class="bmw_korea_box_fourth_1_series">차량유형</div>
+                    <div class="bmw_korea_box_fourth_1_mark"></div>
+                </div>
+
+
+                <div class="bmw_korea_box_fourth_1"><!-- two -->                   
+                    <div class="bmw_korea_box_fourth_2_entire">전체</div>
+                    <div class="bmw_korea_box_fourth_2_entire">1</div>
+                    <div class="bmw_korea_box_fourth_2_entire">2</div>
+                    <div class="bmw_korea_box_fourth_2_entire">3</div>
+                    <div class="bmw_korea_box_fourth_2_entire">4</div>
+                    <div class="bmw_korea_box_fourth_2_entire">5</div>
+                    <div class="bmw_korea_box_fourth_2_entire">6</div>
+                    <div class="bmw_korea_box_fourth_2_entire">7</div>
+                    <div class="bmw_korea_box_fourth_2_entire">8</div>
+                    <div class="bmw_korea_box_fourth_2_entire">Z</div>
+                    <div class="bmw_korea_box_fourth_2_entire">i</div>
+                    <div class="bmw_korea_box_fourth_2_entire">X</div>
+                    <div class="bmw_korea_box_fourth_2_entire">M</div>
+                    <div class="bmw_korea_box_fourth_1_mark2"></div>
+                </div>
+
+                <div class="bmw_korea_box_fourth_2"><!-- three -->
+                    <div class="bmw_korea_box_fourth_2_all">All Models</div>
+                    <div class="bmw_korea_box_fourth_2_picture">
+                        <div class="bmw_korea_box_fourth_2_picture_BMW"><img src="../HomePage_BMW-10-13/imgs/yellow.webp" alt=""></div>
+                        <div class="bmw_korea_box_fourth_2_picture_BMW"><img src="../HomePage_BMW-10-13/imgs/white.webp" alt=""></div>
+                        <div class="bmw_korea_box_fourth_2_picture_BMW"><img src="../HomePage_BMW-10-13/imgs/black.webp" alt=""></div>
+                        <div class="bmw_korea_box_fourth_2_picture_BMW_street"><img src="../HomePage_BMW-10-13/imgs/street.webp" alt=""></div>
+                    </div>
+                    <div class="bmw_korea_box_fourth_2_button">BMW의 모든 모델 뵈기</div>
+                </div>
+
+            </div>    
+        </div>
+
+        
+        <div class="bmw_korea_box_five">
+            <div class="bmw_korea_box_five_start">
+                <div class="bmw_korea_box_five_1">추천 모델.</div>
+
+                <div class="bmw_korea_box_five_2">
+                    <div class="bmw_korea_box_five_2_small_box">
+                        <div class="bmw_korea_box_five_2_small_box_picture">
+                            <div class="bmw_korea_box_five_2_small_box_picture_background"><img src="../HomePage_BMW-10-13/imgs/back_red.jpg" alt=""></div>
+                            <div class="bmw_korea_box_five_2_small_box_picture_drive"><img src="../HomePage_BMW-10-13/imgs/red.webp" alt=""></div>
+                            <div class="bmw_korea_box_five_2_small_box_picture_title">일렉트로 모빌리티의 미래<br> <span>THE iX</span></div>
+                            <div class="bmw_korea_box_five_2_small_box_picture_price">₩146,300,000</div>
+                            <div class="bmw_korea_box_five_2_small_box_picture_button">내 차량 만들기</div>
+
+                           <div class="bmw_korea_box_five_2_small_box_picture_checK">
+                            <div class="bmw_korea_box_five_2_small_box_picture_check_1">
+                               <div class="bmw_korea_box_five_2_small_box_picture_icon"><i class="fa-solid fa-check"></i></div>
+                               <div class="bmw_korea_box_five_2_small_box_picture_explain">2022 올해의 차(car of the YearCOTY) 선정</div>
+                            </div>
+                            <div class="bmw_korea_box_five_2_small_box_picture_check_1">
+                                <div class="bmw_korea_box_five_2_small_box_picture_icon"><i class="fa-solid fa-check"></i></div>
+                                <div class="bmw_korea_box_five_2_small_box_picture_explain">최고출력 523마력</div>
+                             </div>
+                             <div class="bmw_korea_box_five_2_small_box_picture_check_1">
+                                <div class="bmw_korea_box_five_2_small_box_picture_icon"><i class="fa-solid fa-check"></i></div>
+                                <div class="bmw_korea_box_five_2_small_box_picture_explain">447KM 1회 충전 주행 거리</div>
+                             </div>
+                            </div>
+
+                             
+                        </div>
+                    </div>
+                    <div class="bmw_korea_box_five_2_small_box">
+                        <div class="bmw_korea_box_five_2_small_box_picture">
+                            <div class="bmw_korea_box_five_2_small_box_picture_background"><img src="../HomePage_BMW-10-13/imgs/back_black.jpg" alt=""></div>
+                            <div class="bmw_korea_box_five_2_small_box_picture_drive"><img src="../HomePage_BMW-10-13/imgs/black_ix3.webp" alt=""></div>
+                            <div class="bmw_korea_box_five_2_small_box_picture_title">순수전기 SAV<br> <span>THE iX3</span></div>
+                            <div class="bmw_korea_box_five_2_small_box_picture_price">₩75,900,000</div>
+                            <div class="bmw_korea_box_five_2_small_box_picture_button">내 차량 만들기</div>
+
+
+                           <div class="bmw_korea_box_five_2_small_box_picture_checK">
+                                <div class="bmw_korea_box_five_2_small_box_picture_check_1">
+                                    <div class="bmw_korea_box_five_2_small_box_picture_icon"><i class="fa-solid fa-check"></i></div>
+                                    <div class="bmw_korea_box_five_2_small_box_picture_explain">최고출력 286마력</div>
+                                </div>
+                                <div class="bmw_korea_box_five_2_small_box_picture_check_1">
+                                    <div class="bmw_korea_box_five_2_small_box_picture_icon"><i class="fa-solid fa-check"></i></div>
+                                    <div class="bmw_korea_box_five_2_small_box_picture_explain">334KM 1회 충전 주행 거리</div>
+                                </div>
+                                <div class="bmw_korea_box_five_2_small_box_picture_check_1">
+                                    <div class="bmw_korea_box_five_2_small_box_picture_icon"><i class="fa-solid fa-check"></i></div>
+                                    <div class="bmw_korea_box_five_2_small_box_picture_explain">인텔리전트 퍼스널 어시스턴트 시스템</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="bmw_korea_box_five_2_small_box">
+                        <div class="bmw_korea_box_five_2_small_box_picture">
+                            <div class="bmw_korea_box_five_2_small_box_picture_background"><img src="../HomePage_BMW-10-13/imgs/back_green.jpg" alt=""></div>
+                            <div class="bmw_korea_box_five_2_small_box_picture_drive"><img src="../HomePage_BMW-10-13/imgs/black_i4.webp" alt=""></div>
+                            <div class="bmw_korea_box_five_2_small_box_picture_title">최초의 순수전기 그란쿠페<br> <span>THE i4</span></div>
+                            <div class="bmw_korea_box_five_2_small_box_picture_price">₩50,900,000</div>
+                            <div class="bmw_korea_box_five_2_small_box_picture_button">내 차량 만들기</div>
+
+                           <div class="bmw_korea_box_five_2_small_box_picture_checK">
+                            <div class="bmw_korea_box_five_2_small_box_picture_check_1">
+                               <div class="bmw_korea_box_five_2_small_box_picture_icon"><i class="fa-solid fa-check"></i></div>
+                               <div class="bmw_korea_box_five_2_small_box_picture_explain">최고출력 340마력</div>
+                            </div>
+                            <div class="bmw_korea_box_five_2_small_box_picture_check_1">
+                                <div class="bmw_korea_box_five_2_small_box_picture_icon"><i class="fa-solid fa-check"></i></div>
+                                <div class="bmw_korea_box_five_2_small_box_picture_explain">429KM 1회 충전 주행 거리</div>
+                            </div>
+                            <div class="bmw_korea_box_five_2_small_box_picture_check_1">
+                                <div class="bmw_korea_box_five_2_small_box_picture_icon"><i class="fa-solid fa-check"></i></div>
+                                <div class="bmw_korea_box_five_2_small_box_picture_explain">드라이빙 어시스턴트 프로페셔널</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="bmw_korea_box_six">
+                    <div class="bmw_korea_box_six_1"><span>*iX xDrive50</span> 기준</div>
+                    <div class="bmw_korea_box_six_2"><span>*i4 eDrive40</span> 기준</div>
+                </div>
+
+
+                <div class="bmw_korea_box_seven">
+                    <div class="bmw_korea_box_seven_one">
+                        <div class="bmw_korea_box_seven_one_1">
+                            <div class="bmw_korea_box_seven_one_1_pic"><img src="../HomePage_BMW-10-13/imgs/cq5dam_one.jpg" alt=""></div>
+                            <div class="bmw_korea_box_seven_one_1_title">BMW ServiceCare+ 론칭.</div>
+                            <div class="bmw_korea_box_seven_one_1_cont">BMW를 더 오래, 한결같이 사용할 수 있는 차량 관리 구독 서비스를 만나보<br>세요. </div>
+                            <div class="bmw_korea_box_seven_one_1_check">
+                                <div class="bmw_korea_box_seven_one_1_icon"><i class="fa-solid fa-check"></i></div>
+                                <div class="bmw_korea_box_seven_one_1_chec">자세히 보기</div>
+                            </div>
+                        </div>
+                        <div class="bmw_korea_box_seven_one_2">
+                            <div class="bmw_korea_box_seven_one_1_pic"><img src="../HomePage_BMW-10-13/imgs/cq5dam_two.jpg" alt=""></div>
+                            <div class="bmw_korea_box_seven_one_1_title">금융 프로모션.</div>
+                            <div class="bmw_korea_box_seven_one_1_cont"></div>
+                            <div class="bmw_korea_box_seven_one_1_check">
+                                <div class="bmw_korea_box_seven_one_1_icon"><i class="fa-solid fa-check"></i></div>
+                                <div class="bmw_korea_box_seven_one_1_chec">자세히 보기</div>
+                           </div>
+                       </div>
+                    </div>
+                    <div class="bmw_korea_box_seven_two">
+                        <div class="bmw_korea_box_seven_one_1">
+                            <div class="bmw_korea_box_seven_one_1_pic"><img src="../HomePage_BMW-10-13/imgs/cq5dam_three.jpg" alt=""></div>
+                            <div class="bmw_korea_box_seven_one_1_title">MY BMW APPS</div>
+                            <div class="bmw_korea_box_seven_one_1_cont"></div>
+                            <div class="bmw_korea_box_seven_one_1_check">
+                                <div class="bmw_korea_box_seven_one_1_icon"><i class="fa-solid fa-check"></i></div>
+                                <div class="bmw_korea_box_seven_one_1_chec">자세히 보기</div>
+                            </div>
+                        </div>
+                        <div class="bmw_korea_box_seven_one_2">
+                            <div class="bmw_korea_box_seven_one_1_pic"><img src="../HomePage_BMW-10-13/imgs/cq5dam_four.png" alt=""></div>
+                            <div class="bmw_korea_box_seven_one_1_title">BMW 코리아 소셜 미디어.</div>
+                            <div class="bmw_korea_box_seven_one_1_cont" id="media">BMW 코리아의 다양한 소식을 가까이서 만날 수 있습니다.</div>
+                            <div class="bmw_korea_box_seven_one_1_check">
+                                <div class="bmw_korea_box_seven_one_1_icon"><i class="fa-solid fa-check"></i></div>
+                                <div class="bmw_korea_box_seven_one_1_chec">자세히 보기</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bmw_korea_box_eight">
+                    <div class="bmw_korea_box_eight_start">
+                        <div class="bmw_korea_box_eight_start_box_fuor">
+
+                            <div class="bmw_korea_box_eight_start_box_fuor_small_box">
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_img"><img src="../HomePage_BMW-10-13/imgs/two.jpg" alt=""></div>
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_title">THE 8X JEFF KOONS.</div>
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_message" id="four_title_one">
+                                    BMW M850i xDrive 그란 쿠페와 <br> 
+                                    유명 아티스트 제프 쿤스의 콜라 <br>
+                                    보레이션 작품을 소개합니다.
+                                </div>
+                                <div class="bmw_korea_box_seven_one_1_check" id="five_check">
+                                    <div class="bmw_korea_box_seven_one_1_icon"><i class="fa-solid fa-check"></i></div>
+                                    <div class="bmw_korea_box_seven_one_1_chec">바로 가기</div>
+                                </div>
+                            </div>
+
+                            <div class="bmw_korea_box_eight_start_box_fuor_small_box">
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_img"><img src="../HomePage_BMW-10-13/imgs/three.jpg" alt=""></div>
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_title">BMW 월 납입금 계산기.</div>
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_message" id="four_title_one">
+                                    나의 에산으로 구매 가능한 BMW <br>
+                                    모델과 금융 프로그램을 확인해보 <br>
+                                    세요. 
+                                </div>
+                                <div class="bmw_korea_box_seven_one_1_check" id="five_check">
+                                    <div class="bmw_korea_box_seven_one_1_icon"><i class="fa-solid fa-check"></i></div>
+                                    <div class="bmw_korea_box_seven_one_1_chec">바로 가기</div>
+                                </div>
+                            </div>
+
+                            <div class="bmw_korea_box_eight_start_box_fuor_small_box" id="small_dr_ct">
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_img"><img src="../HomePage_BMW-10-13/imgs/four.jpg" alt=""></div>
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_title">BMW 드라이빙 센터.</div>
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_message" id="four_title_one">
+                                    전세계 최초 드라이빙 센터. 드라 <br>
+                                    이빙, 이상의 즐거움을 느껴보십 <br>
+                                    시오.
+                                </div>
+                                <div class="bmw_korea_box_seven_one_1_check" id="nine_check">
+                                    <div class="bmw_korea_box_seven_one_1_icon"><i class="fa-solid fa-check"></i></div>
+                                    <div class="bmw_korea_box_seven_one_1_chec">자세히 보기</div>
+                                </div>
+                            </div>
+
+                            <div class="bmw_korea_box_eight_start_box_fuor_small_box">
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_img"><img src="../HomePage_BMW-10-13/imgs/five.jpg" alt=""></div>
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_title">BMW PLUS.</div>
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_message" id="four_down">
+                                    한층 업그레이드된 BMW PLUS <br>
+                                    앱으로 간편하게 서비스를 예약해 <br>
+                                    보세요.
+                                </div>
+                                <div class="bmw_korea_box_seven_one_1_check" id="six_check">
+                                    <div class="bmw_korea_box_seven_one_1_icon"><i class="fa-solid fa-check"></i></div>
+                                    <div class="bmw_korea_box_seven_one_1_chec">자세히 보기</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- one Line box -->
+
+
+                        <div class="bmw_korea_box_eight_start_box_fuor">
+
+                            <div class="bmw_korea_box_eight_start_box_fuor_small_box">
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_img"><img src="../HomePage_BMW-10-13/imgs/six.jpg" alt=""></div>
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_title" id="vantage">BMW <br> VANTAGE.</div>
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_message" id="fiv_down">
+                                    당신의 라이스프타일에 즐거움을 <br>
+                                    전할 블록체인 기반 BMW 최초의 <br>
+                                    멤버십 서비스, Vantage를 소개합 <br>
+                                    니다. 
+                                </div>
+                                <div class="bmw_korea_box_seven_one_1_check" id="seven_check">
+                                    <div class="bmw_korea_box_seven_one_1_icon"><i class="fa-solid fa-check"></i></div>
+                                    <div class="bmw_korea_box_seven_one_1_chec">자세히 보기</div>
+                                </div>
+                            </div>
+
+                            <div class="bmw_korea_box_eight_start_box_fuor_small_box">
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_img"><img src="../HomePage_BMW-10-13/imgs/seven.jpg" alt=""></div>
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_title" id="vantage">BMW 오리지널 <br> 부품 가격 조회.</div>
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_message" id="fiv_down">
+                                    bmw 부품가격 정보를 조회하 <br>
+                                    실 수 있는 웹사이트입니다. 
+                                </div>
+                                <div class="bmw_korea_box_seven_one_1_check" id="ten_check">
+                                    <div class="bmw_korea_box_seven_one_1_icon"><i class="fa-solid fa-check"></i></div>
+                                    <div class="bmw_korea_box_seven_one_1_chec">자세히 보기</div>
+                                </div>
+                            </div>
+
+                            <div class="bmw_korea_box_eight_start_box_fuor_small_box">
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_img"><img src="../HomePage_BMW-10-13/imgs/eight.jpg" alt=""></div>
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_title" id="vantage">BMW M.</div>
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_message" id="fiv_down">
+                                    세상에서 가장 강력한 글자. M
+                                </div>
+                                <div class="bmw_korea_box_seven_one_1_check" id="eight_check">
+                                    <div class="bmw_korea_box_seven_one_1_icon"><i class="fa-solid fa-check"></i></div>
+                                    <div class="bmw_korea_box_seven_one_1_chec">자세히 보기</div>
+                               </div>
+                            </div>
+
+                            <div class="bmw_korea_box_eight_start_box_fuor_small_box">
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_img"><img src="../HomePage_BMW-10-13/imgs/nine.jpg" alt=""></div>
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_title" id="vantage">BMW 일렉트로 <br>모빌리티.</div>
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_message" id="fiv_down">
+                                    BMW 전기차와 플러그인 하이브 <br>
+                                    리드 모델을 만나보세요. 
+                                </div>
+                                <div class="bmw_korea_box_seven_one_1_check" id="ele_check">
+                                    <div class="bmw_korea_box_seven_one_1_icon"><i class="fa-solid fa-check"></i></div>
+                                    <div class="bmw_korea_box_seven_one_1_chec">자세히 보기</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- two Line box -->
+
+                        <div class="bmw_korea_box_eight_start_box_fuor">
+                
+
+                            <div class="bmw_korea_box_eight_start_box_fuor_small_box">
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_img"><img src="../HomePage_BMW-10-13/imgs/ten.png" alt=""></div>
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_title" id="vantage">BMW 내비게이 <br>션 업데이트.</div>
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_message" id="fiv_down">
+                                    단계별 비디오 가이드에 따라 간 <br>
+                                    단하게 BMW 내비게이션을 업데 <br>
+                                    이트할 수 있습니다. 
+                                </div>
+                                <div class="bmw_korea_box_seven_one_1_check" id="twelv_check">
+                                    <div class="bmw_korea_box_seven_one_1_icon"><i class="fa-solid fa-check"></i></div>
+                                    <div class="bmw_korea_box_seven_one_1_chec">자세히 보기</div>
+                                </div>
+                            </div>
+
+                            <div class="bmw_korea_box_eight_start_box_fuor_small_box">
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_img"><img src="../HomePage_BMW-10-13/imgs/elev.jpg" alt=""></div>
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_title" id="vantage">BMW 리콜 대상 <br>차량 조회.</div>
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_message" id="fiv_down">
+                                    고객님의 '차대번호'를 입력하시 <br>
+                                    면 소유하신 차량에 대한 리콜 정 <br>
+                                    보 조회가 가능합니다. 
+                                </div>
+                                <div class="bmw_korea_box_seven_one_1_check" id="twelv_check">
+                                    <div class="bmw_korea_box_seven_one_1_icon"><i class="fa-solid fa-check"></i></div>
+                                    <div class="bmw_korea_box_seven_one_1_chec">자세히 보기</div>
+                                </div>
+                            </div>
+
+                            <div class="bmw_korea_box_eight_start_box_fuor_small_box">
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_img"><img src="../HomePage_BMW-10-13/imgs/twelv.jpg" alt=""></div>
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_title" id="vantage">BMW 파이낸셜 <br>서비스.</div>
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_message" id="fiv_down">
+                                    귀하에게 꼭 맞는 금융 솔루션과 <br>
+                                    투자 계획을 제공하는 성공 파트 <br>
+                                    너. 
+                                </div>
+                                <div class="bmw_korea_box_seven_one_1_check" id="twelv_check">
+                                    <div class="bmw_korea_box_seven_one_1_icon"><i class="fa-solid fa-check"></i></div>
+                                    <div class="bmw_korea_box_seven_one_1_chec">자세히 보기</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- three Line box -->
+
+
+                        <div class="bmw_korea_box_eight_start_box_fuor">
+                            <div class="bmw_korea_box_eight_start_box_fuor_small_box">
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_img"><img src="../HomePage_BMW-10-13/imgs/thirte.jpg" alt=""></div>
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_title" id="vantage">BMW 온라인 견 <br>적내기.</div>
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_message" id="fiv_down">
+                                    원하는 BMW 차량의 월 납임금을 <br>
+                                    지금 바로 확인해 보세요. 
+                                </div>
+                                <div class="bmw_korea_box_seven_one_1_check" id="thirte_check">
+                                    <div class="bmw_korea_box_seven_one_1_icon"><i class="fa-solid fa-check"></i></div>
+                                    <div class="bmw_korea_box_seven_one_1_chec">자세히 보기</div>
+                                </div>
+                            </div>
+
+                            <div class="bmw_korea_box_eight_start_box_fuor_small_box">
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_img"><img src="../HomePage_BMW-10-13/imgs/fourte.jpg" alt=""></div>
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_title" id="vantage">BMW 법인 판매<br>& SPECIAL<br>SALES .</div>
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_message" id="six_down">
+                                    BMW 법인 판매 및 Special Sales <br>
+                                    프로그램을 확인해 보세요. 
+                                </div>
+                                <div class="bmw_korea_box_seven_one_1_check" id="fourt_check">
+                                    <div class="bmw_korea_box_seven_one_1_icon"><i class="fa-solid fa-check"></i></div>
+                                    <div class="bmw_korea_box_seven_one_1_chec">자세히 보기</div>
+                                </div>
+                            </div>
+                        
+                            <div class="bmw_korea_box_eight_start_box_fuor_small_box">
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_img"><img src="../HomePage_BMW-10-13/imgs/fifte.png" alt=""></div>
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_title" id="vantage">BMW 코리아의<br>한국형 레몬법.</div>
+                                <div class="bmw_korea_box_eight_start_box_fuor_small_box_message" id="fiv_down">
+                                    레몬법 대상 차량에 대한 정보를 <br>
+                                    확인하실 수 있습니다. 
+                                </div>
+                                <div class="bmw_korea_box_seven_one_1_check" id="thirte_check">
+                                    <div class="bmw_korea_box_seven_one_1_icon"><i class="fa-solid fa-check"></i></div>
+                                    <div class="bmw_korea_box_seven_one_1_chec">자세히 보기</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+            <!-- footer -->
+            <div class="KOREA_BMW_YELLOW_AND_BLACK_SUITE_AND_1000">
+                <div class="moonsm">
+                <div class="KOREA_BMW_YELLOW_AND_BLACK_SUITE_AND_1000_bmw">
+                    <div class="KOREA_BMW_YELLOW_AND_BLACK_SUITE_AND_1000_icon"><i class="fa-solid fa-car"></i></div>
+                    <div class="KOREA_BMW_YELLOW_AND_BLACK_SUITE_AND_1000_yellow_and_black">시승 신청</div>
+                </div>
+                <div class="KOREA_BMW_YELLOW_AND_BLACK_SUITE_AND_1000_bmw">
+                    <div class="KOREA_BMW_YELLOW_AND_BLACK_SUITE_AND_1000_icon"><i class="fa-regular fa-star"></i></div>
+                    <div class="KOREA_BMW_YELLOW_AND_BLACK_SUITE_AND_1000_yellow_and_black">카탈로그 다운로드</div>
+                </div>
+                <div class="KOREA_BMW_YELLOW_AND_BLACK_SUITE_AND_1000_bmw">
+                    <div class="KOREA_BMW_YELLOW_AND_BLACK_SUITE_AND_1000_icon"><i class="fa-brands fa-github"></i></div>
+                    <div class="KOREA_BMW_YELLOW_AND_BLACK_SUITE_AND_1000_yellow_and_black">내 차량 만들기</div>
+                </div>
+                <div class="KOREA_BMW_YELLOW_AND_BLACK_SUITE_AND_1000_bmw">
+                    <div class="KOREA_BMW_YELLOW_AND_BLACK_SUITE_AND_1000_icon"><i class="fa-solid fa-bolt"></i></div>
+                    <div class="KOREA_BMW_YELLOW_AND_BLACK_SUITE_AND_1000_yellow_and_black">내 차량 찾기</div>
+                </div>
+                <div class="KOREA_BMW_YELLOW_AND_BLACK_SUITE_AND_1000_bmw">
+                    <div class="KOREA_BMW_YELLOW_AND_BLACK_SUITE_AND_1000_icon"><i class="fa-regular fa-sun"></i></div>
+                    <div class="KOREA_BMW_YELLOW_AND_BLACK_SUITE_AND_1000_yellow_and_black">가격표</div>
+                </div>
+                </div>
+            </div>
+
+            </div> 
+        </div>
+    </div>
+</div>
+
+        <!-- fixed menu potal-->
+        <div class="new3_or_m5_or_m5_m8">
+            <div class="m5first">
+                <div class="m5first_box">
+                    <div class="m5first_icon"><i class="fa-solid fa-car"></i></div>
+                    <div class="m5first_name">내 차량 찾기</div>
+                </div>
+                <div class="m5first_box">
+                    <div class="m5first_icon"><i class="fa-regular fa-circle"></i></div>
+                    <div class="m5first_name">시승 신청</div>
+                </div>
+                <div class="m5first_box">
+                    <div class="m5first_icon"><i class="fa-solid fa-car"></i></div>
+                    <div class="m5first_name">카탈로그 다운로드</div>
+                </div>
+                <div class="m5first_box">
+                    <div class="m5first_icon"><i class="fa-regular fa-note-sticky"></i></div>
+                    <div class="m5first_name">가격표</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="zero_1">
+            <div class="zero_1_go_leagoflefend">
+                <div class="zero_1_go_leagoflefend_fushong_shot_dododo"></div>
+                <div class="suaaaaa_wow_getthebmw_and_wanthouse_world_where">
+                    <div class="bmw_m8_yellow_one">
+                        <div class="thisyeardrivethebmwm8yello_one">BMW 코리아</div>
+                        <div class="ihavethebmw_key_one">
+                            <div>인재 채용</div>
+                            <div>BMW 컨택트</div>
+                            <div>시스템 설정</div>
+                            <div>소프트웨어 다운로드</div>
+                            <div>BMW의 모든 웹사이트</div>
+                        </div>
+                    </div>
+                    <div class="bmw_m8_yellow_two">
+                        <div class="thisyeardrivethebmwm8yello_two">공지사항</div>
+                        <div class="ihavethebmw_key_two">
+                            <div>외부감사인 변경선임 공고</div>
+                            <div>BMW '개인정보처리방침'변경에 대한 안내</div>
+                            <div>커넥티드 드라이브 '이용약관' 개정 안내</div>
+                        </div>
+                    </div>
+                    <div class="bmw_m8_yellow_three">
+                        <div class="thisyeardrivethebmwm8yello_three">연관 채널</div>
+                        <div class="ihavethebmw_key_three">
+                            <div>Instargram</div>
+                            <div>Facebook</div>
+                            <div>Youtube</div>
+                            <div>BMW.com</div>
+                            <div>BMW 드라이빙센터</div>
+                            <div>BMW 코리아 미래재단</div>
+                            <div>파이낸셜 서비스</div>
+                        </div>
+                    </div>
+                    <div class="bmw_m8_yellow_four">
+                        <div class="thisyeardrivethebmwm8yello_four">법률 약관 정보</div>
+                        <div class="ihavethebmw_key_four">
+                            <div>법적고지</div>
+                            <div>쿠키 정책</div>                     
+                            <div>BMW 멤버십 개인정보처리방침</div>                                         
+                            <div>영상정보처리기기 운영*관리 방침</div>
+                            <div>커넥티드 드라이브 이용약관</div>
+                            <div>서비스케어 플러스 이용약관</div>
+                        </div>
+                    </div>
+                    <div class="bmw_m8_yellow_five">
+                        <div class="thisyeardrivethebmwm8yello_five">개인정보처리방침</div>
+                        <div class="ihavethebmw_key_five">
+                            <div>개인정보처리방침</div>
+                            <div>커넥티드 드라이브 개인정보 처리방침</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="youwantyouwillbe">
+            <div class="youwantyouwillbe_123">
+                <div class="youwantyouwillbe_123456">C BMW Korea 2022</div>
+                <div class="youwantyouwillbe_123456789">
+                    <div class="youwantyouwillbe_12345678901234">컨택트</div>
+                    <div class="youwantyouwillbe_123456789op">쿠키 정책</div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+<script>
+
+
+    $(window).scroll(function(){
+
+        if($(window).scrollTop() > 5100){
+            $(".new3_or_m5_or_m5_m8").css("display", "none")
+        }
+
+        else{
+            $(".new3_or_m5_or_m5_m8").css("display", "block")
+        }
+
+    })
+
+
+            // (window < 150) 
+            // {display : none}
+
+            // $('#menu_one_one').click(function(){
+            //     $('#menu_one_one_background').slideDown('fast')
+            //     $('.head_menu').css('background-color','white')
+
+            //     // $('#menu_one_one_background').slideUp('fast');
+            // });
+
+            // $('#menu_one_one').click(function(){
+            //     $('#menu_one_one_background').slideUp('fast')
+            // });
+
+            $(".background_bmw_m8").addClass("entire_visible")
+
+            $('#menu_one_one').click(function(){
+                // for(let m = 0; m < 10; m++){
+                // while(true){
+                // $(".background_bmw_m8").addClass("entire_visible")
+                // contains entire_visible true false % hasclass removeclass addclass
+                if($('#menu_one_one_background').is(':hidden') == true)
+                {
+                    // $(".head_menu_entire").css("background","")
+                    $('#menu_one_one_background').slideDown('400',function(){
+
+                    })
+                    // $(".head_menu_entire").css("background", "")
+                    $(".head_box").css("background", "#fff")
+                    // $('.head_menu_entire').css("background", "white")
+                    // $('.head_box').css("background", "white")
+                    // $(".head_box").css("height", )
+                    // $(".head_menu_entire").css("transition", "5s")
+                    // $(".head_menu_entire").css("background", "")
+                    $('.menu_one').css("color","#000000")
+                    $('.menu_two').css("color","#000000")
+                    $(".head_menu_three").css("color","#000000")
+
+                    // $(".background_bmw_m8").addClass("entire_visible")
+                    // $(".background_bmw_m8").css("transition","")
+                    // $('@menu_one_one').removeClass(r);
+                    // number++;
+                    // reset;
+                    // startl;
+                    // wow;
+                    // click = click + 1;
+                    // $("#background_bmw_m8_yellow_is_mine").css("opacity","1")
+                    // $(".javascript_four_box").css("opacity","0")
+                }
+                else
+                {
+                    $('#menu_one_one_background').slideUp('400', function(){ 
+                        // $(".head_menu_entire").css("background-color", ""),
+                        $('.head_box').css("background", "")
+                        // $(".head_menu_entire").css("transition", "1s"),
+                        $('.menu_one').css("color", ""),
+                        $('.menu_two').css("color", "")
+                    })
+
+                    // $("#background_bmw_m8").addClass("entire_visible")
+                    // 
+                    // $(".head_box").css("transition", "1s")
+                    // $('.head_box').css({"transition" : " 0deg 4s", "background-color" : "#00000066"})
+                    // $('#menu_one_one').addClass(r);
+                    // number++;
+                };
+                
+                // for(let m = 0; m < 10; m++){}
+            });
+
+            $(".javascript_one").click(function(){
+                // $("#background_bmw_m8_yellow_is_mine").addClass("entire_visible")
+                // $(".background_bmw_m8").css("opacity","1")
+                $(".js_entire>div").removeClass("entire_visible")
+                $(".background_bmw_m8").addClass("entire_visible")
+           
+                // $("#background_bmw_m8_yellow_is_mine").css("opacity","1")
+                // $("#background_bmw_m8_yellow_is_mine").css("transition","2s")
+
+                // $(".javascript_two_box").css("opacity","0")
+                // $(".javascript_two_box").css("transition","")
+
+                // $(".javascript_three_box").css("opacity", "0")
+                // $(".javascript_three_box").css("transition","")
+
+                // $(".javascript_four_box").css("opacity","0")
+                // $(".javascript_four_box").css("transition","")
+                // $(".javascript_three_box").css("transition","")
+
+                // $("#background_bmw_m8_yellow_is_mine").css("transition","10s")
+            })
+                // $("#background_bmw_m8_yellow_is_mine").css("transition","2s")
+
+
+                // $('.nikey').transition({
+                //     rotate3d:'180deg'
+                // })
+            $(".javascript_two").click(function(){
+                // $(".background_bmw_m8").css("opacity","0")
+                $(".js_entire>div").removeClass("entire_visible")
+                $(".javascript_two_box").addClass("entire_visible")
+                // $(".javascript_two_box").css("opacity","1")
+                // $(".javascript_two_box").css("transition","1s")
+                // $(".javascript_two_box").css("transition", "5s")
+
+
+                // $("#background_bmw_m8_yellow_is_mine").css("display","none")
+
+                // $("#background_bmw_m8_yellow_is_mine").css("opacity", "0")
+                // $("#background_bmw_m8_yellow_is_mine").css("transition","")
+
+
+                // $(".javascript_three_box").css("opacity","0")
+                // $(".javascript_three_box").css("transition", "")
+
+                // $(".javascript_four_box").css("opacity","0")
+                // $(".javascript_four_box").css("transition", "")
+            })
+
+            $(".javascript_three").click(function(){
+                // $(".background_bmw_m8").css("opacity","0")
+                $(".js_entire>div").removeClass("entire_visible")
+                $(".javascript_three_box").addClass("entire_visible")
+            })
+            // $(".javascript_three").click(function(){
+            //     $(".javascript_three_box").css("opacity", "1")
+            //     $(".javascript_three_box").css("transition","1s")
+            //     // $(".javascript_three_box").css("transition", "all 1s")
+
+            //     // $(".javascript_three_box").css("display", "block")
+            //     $("#background_bmw_m8_yellow_is_mine").css("opacity","0")
+            //     $("#background_bmw_m8_yellow_is_mine").css("transition","")
+
+            //     $(".javascript_two_box").css("opacity", "0")
+            //     $(".javascript_two_box").css("transition","")
+
+            //     $(".javascript_four_box").css("opacity","0")
+            //     $(".javascript_four_box").css("transition", "")
+            // })
+            $(".javascript_four").click(function(){
+                $(".js_entire>div").removeClass("entire_visible")
+                $(".javascript_four_box").addClass("entire_visible")
+            })
+            $(".javascript_five").click(function(){
+                $(".js_entire>div").removeClass("entire_visible")
+                $(".javascript_five_box").addClass("entire_visible")
+            })
+            // $(".javascript_four").click(function(){
+            //     $(".javascript_four_box").css("opacity","1")
+            //     $(".javascript_four_box").css("transition","1s")
+
+            //     $("#background_bmw_m8_yellow_is_mine").css("opacity","0")
+            //     $("#background_bmw_m8_yellow_is_mine").css("transition","")
+
+            //     $(".javascript_two_box").css("opacity", "0")
+            //     $(".javascript_two_box").css("transition", "")
+
+            //     $(".javascript_three_box").css("opacity", "0")
+            //     $(".javascript_three_box").css("transition", "")
+            // })
+            $("#menu_one_one_close").click(function(){
+                $("#menu_one_one_background").slideUp(300, function(){
+                    $(".head_box").css("background","")
+                    $(".menu_one").css("color","")
+                    $(".menu_two").css("color", "")
+                })
+            })
+</script>
+</body>
+</html>
